@@ -1,0 +1,10 @@
+
+
+import re
+# put your python code here
+def check_mail(s):
+    return re.match(r"[0-9a-zA-Z\.-_]+\@[a-zA-Z0-9-_]+\.[a-zA-Z0-9-.]", s)
+
+s = '1%abc@it.ru dfd3.ru@mail BiBa123@list.ru sc_lib@list.ru п$fg9@fd.com'.lower().split()
+res = filter(check_mail, s)
+print(*res)
